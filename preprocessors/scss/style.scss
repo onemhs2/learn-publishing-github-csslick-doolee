@@ -1,10 +1,41 @@
 @import "variables", "base";
 
-h1 {
-  background-color: $primary-color;
-  color: $secondary-color;
+.container {
+  width: 100%;
+  max-width: 1400px;
+  min-width: 1000px;
+  margin: 0 auto;
 }
 
-p {
-  color: $primary-color;
+header {
+  border-bottom: 1px solid rgba($color: rgb(0, 0, 0), $alpha: 0.25);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    nav {
+      ul {
+        li {
+          // flex로 변경할 것
+          display: inline;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+.main-visual {
+  background-color: $primary-color;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 105px;
+    padding-bottom: 105px;
+  }
 }

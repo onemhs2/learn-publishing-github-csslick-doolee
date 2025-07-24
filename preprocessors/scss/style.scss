@@ -1,0 +1,10 @@
+@import "variables", "base";
+
+h1 {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+p {
+  color: $primary-color;
+}

@@ -3,8 +3,9 @@
 .container {
   width: 100%;
   max-width: 1400px;
-  min-width: 1000px;
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 header {
@@ -18,6 +19,10 @@ header {
 
     nav {
       ul {
+        @media (max-width: $mobile) {
+          display: none;
+        }
+
         li {
           // flex로 변경할 것
           display: inline;
@@ -33,6 +38,16 @@ header {
         }
       }
     }
+
+    .toggle {
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: inline;
+        background-color: transparent;
+        border: none;
+      }
+    }
   }
 }
 
@@ -45,6 +60,12 @@ header {
     align-items: center;
     padding-top: 105px;
     padding-bottom: 105px;
+
+    img {
+      @media (max-width: $mobile) {
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -56,6 +77,10 @@ header {
     text-transform: uppercase;
     font-size: 36px;
     letter-spacing: calc(36px * 0.5);
+
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
   }
 
   .container {
@@ -63,16 +88,23 @@ header {
     flex-wrap: wrap;
     gap: 20px;
 
+    @media (max-width: $mobile) {
+      display: block;
+    }
+
     li {
       margin-bottom: 40px;
       width: calc((100% - 20px * 3) / 4);
+
+      @media (max-width: $mobile) {
+        width: auto;
+      }
 
       img {
         width: 100%;
       }
 
       h3 {
-        // font-family: "Noto Sans KR", sans-serif;
         font-weight: normal;
         font-size: 16px;
       }
